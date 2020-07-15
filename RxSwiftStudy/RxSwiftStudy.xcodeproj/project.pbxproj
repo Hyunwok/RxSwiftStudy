@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		D61ACD2724BF41E300A047F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D61ACD2A24BF41E400A047F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D61ACD2C24BF41E400A047F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D61ACD3224BF42E400A047F3 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F053F280C2A2F04A6C24E741 /* Pods_RxSwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,7 +49,6 @@
 				554FBF9C211ADA051F1BB5D5 /* Pods-RxSwiftStudy.debug.xcconfig */,
 				041BB6ADB4F3CEB5AC23C881 /* Pods-RxSwiftStudy.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -63,6 +63,7 @@
 		D61ACD1224BF41E200A047F3 = {
 			isa = PBXGroup;
 			children = (
+				D61ACD3224BF42E400A047F3 /* Playground.playground */,
 				D61ACD1D24BF41E200A047F3 /* RxSwiftStudy */,
 				D61ACD1C24BF41E200A047F3 /* Products */,
 				2C2D44ACD0A509D795391B84 /* Pods */,
