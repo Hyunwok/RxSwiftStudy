@@ -6,7 +6,7 @@ enum MyError: Error {
 }
 let disposeBag = DisposeBag()
 
-let subject = BehaviorSubject<String>()
+let subject = PublishSubject<String>()
 
 subject.onNext("전달되지 않을 onNext")
 
