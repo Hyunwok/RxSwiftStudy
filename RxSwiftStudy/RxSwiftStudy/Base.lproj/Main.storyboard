@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-U8-Ub5">
-                                <rect key="frame" x="30" y="113" width="315" height="280.5"/>
+                                <rect key="frame" x="30" y="113" width="315" height="355"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login With Rx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6Z-aK-hUk">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
@@ -41,6 +41,12 @@
                                             <action selector="getLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qD0-KH-WRs"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7C-jQ-Zlq">
+                                        <rect key="frame" x="0.0" y="334.5" width="315" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -55,6 +61,7 @@
                     </view>
                     <connections>
                         <outlet property="LoginBtn" destination="0w9-Gv-bJy" id="RbQ-92-MjL"/>
+                        <outlet property="enableLbl" destination="C7C-jQ-Zlq" id="tq6-zf-CFY"/>
                         <outlet property="loginIdTxtField" destination="jCB-hT-4m8" id="dhP-FG-uMe"/>
                         <outlet property="loginPwTxtField" destination="zje-6o-WWl" id="TXO-KU-da1"/>
                     </connections>
