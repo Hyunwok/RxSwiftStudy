@@ -1,20 +1,34 @@
-//
-//  ViewController.swift
-//  RxSwiftStudy
-//
-//  Created by 이현욱 on 2020/07/15.
-//  Copyright © 2020 이현욱. All rights reserved.
-//
-
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
+    
+    let loginModel = LoginViewModel()
+    let disposeBag = DisposeBag()
 
+    @IBOutlet weak var loginIdTxtField: UITextField!
+    @IBOutlet weak var loginPwTxtField: UITextField!
+    @IBOutlet weak var LoginBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginIdTxtField.becomeFirstResponder()
+        loginIdTxtField.rx.text.map { $0 ?? "" }.bind(to: loginModel.idPublishSubject).disposed(by: disposeBag)
+        loginPwTxtField.rx.text.map { $0 ?? "" }.bind(to: loginModel.pwPublishSubject).disposed(by: disposeBag)
+        
+        loginModel.isValid().bind(to: LoginBtn.rx.isEnabled).disposed(by: disposeBag)
+        loginModel.isValid().map{$0 ? 1 : 0.1}.bind(to: LoginBtn.rx.alpha).disposed(by: disposeBag)
+            
+        
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func getLogin(_ sender: UIButton) {
+        print("tabbed")
+    }
+    
+    
+    
 }
 
