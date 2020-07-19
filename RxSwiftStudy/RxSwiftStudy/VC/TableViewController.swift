@@ -18,7 +18,6 @@ class TableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let observable : Observable<[Person]> = Observable.just(personArray)
         observable.bind(to: tableView.rx.items(cellIdentifier: "cell")) { _, person, cell in
             if let cellToUse = cell as? TableViewCell {
@@ -26,7 +25,13 @@ class TableViewController: UIViewController {
                 cellToUse.lbl2?.text = "\(person.age)"
             }
         }.disposed(by: disposeBag)
-    }
+        tableView.rx.itemSelected.subscribe(onNext : {
+            [weak self] index in
+            if let cell = self!.tableView.cellForRow(at: index) as? TableViewCell {
+                cell.lbl1.text = "new value"
+            }
+        }
+    )}
 }
 
 
