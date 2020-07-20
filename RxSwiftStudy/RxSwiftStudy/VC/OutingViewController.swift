@@ -1,18 +1,12 @@
-//
-//  OutingViewController.swift
-//  RxSwiftStudy
-//
-//  Created by 이현욱 on 2020/07/20.
-//  Copyright © 2020 이현욱. All rights reserved.
-//
-
 import UIKit
+import RxSwift
+import RxCocoa
 
 class OutingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
     }
     
