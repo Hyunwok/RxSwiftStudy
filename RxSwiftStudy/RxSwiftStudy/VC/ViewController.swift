@@ -24,16 +24,11 @@ class ViewController: UIViewController {
         loginModel.isValid().subscribe(onNext:{ [weak self] text in
             self?.enableLbl.text = text ? "Able" : "Enable"
             self?.enableLbl.textColor = text ? .green : .red
-            }).disposed(by: disposeBag)
-        
-        // Do any additional setup after loading the view.
+        }).disposed(by: disposeBag)
     }
     
     @IBAction func getLogin(_ sender: UIButton) {
         print("tabbed")
     }
-    
-    
-    
 }
 
