@@ -1,5 +1,4 @@
 import UIKit
-import DLRadioButton
 import TextFieldEffects
 
 
@@ -10,7 +9,7 @@ class DetailOutingViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var textField: CustomTextField!
-    @IBOutlet var asdasd: DLRadioButton!
+    @IBOutlet weak var reasonTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
