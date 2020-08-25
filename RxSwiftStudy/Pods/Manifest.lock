@@ -1,6 +1,7 @@
 PODS:
   - AnimatedTextInput (0.5.5)
   - DLRadioButton (1.4.12)
+  - FSCalendar (2.8.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -12,6 +13,7 @@ PODS:
 DEPENDENCIES:
   - AnimatedTextInput
   - DLRadioButton (~> 1.4)
+  - FSCalendar
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - TextFieldEffects
@@ -20,6 +22,7 @@ SPEC REPOS:
   trunk:
     - AnimatedTextInput
     - DLRadioButton
+    - FSCalendar
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -28,11 +31,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AnimatedTextInput: aadbdfa5a538a03cc9fbea700b43d2bb21a5d132
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: e51f5c0c482860371fd8863f02218ea200169095
+PODFILE CHECKSUM: c4d642d145474b534e890eedf171558fec4f5b52
 
 COCOAPODS: 1.9.3

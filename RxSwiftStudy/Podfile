@@ -9,6 +9,7 @@ target 'RxSwiftStudy' do
     pod 'DLRadioButton', '~> 1.4'
     pod 'AnimatedTextInput'
     pod 'TextFieldEffects'
+    pod 'FSCalendar'
   # Pods for RxSwiftStudy
 
 end
