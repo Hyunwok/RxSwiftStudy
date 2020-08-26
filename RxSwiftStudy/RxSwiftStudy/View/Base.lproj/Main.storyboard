@@ -561,45 +561,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nj-MF-tg4">
-                                <rect key="frame" x="40" y="424" width="295" height="86"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" id="qjG-8H-5L2">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="86"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h9D-g4-x2A">
-                                                <rect key="frame" x="0.0" y="0.0" width="322" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J07-21-xgC" customClass="FSCalendar">
-                                <rect key="frame" x="40" y="111" width="295" height="305"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRh-FT-iOi">
-                                        <rect key="frame" x="8" y="8" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.32549019610000002" green="0.13725490200000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="previousBtn:" destination="VMX-7L-nzg" eventType="touchUpInside" id="IbP-WR-dud"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
-                                        <color key="value" red="0.32549019610000002" green="0.13725490200000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBV-fi-pop">
                                 <rect key="frame" x="252" y="57" width="103" height="12"/>
                                 <subviews>
@@ -633,39 +594,76 @@
                                     <constraint firstAttribute="height" constant="12" id="wra-Fx-IuZ"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEE-25-5Gx">
-                                <rect key="frame" x="289" y="547" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEE-25-5Gx">
+                                <rect key="frame" x="289" y="567" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.13725490200000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ahp-HG-1jz"/>
+                                    <constraint firstAttribute="height" constant="50" id="cjx-r4-2sb"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeScheduleAndAcademicSchedule:" destination="VMX-7L-nzg" eventType="touchUpInside" id="KPK-1m-N2c"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0N-Ig-jaj">
+                                <rect key="frame" x="40" y="107" width="295" height="403"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Db-BX-YxV" customClass="FSCalendar">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="292"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6nj-MF-tg4">
+                                        <rect key="frame" x="0.0" y="317" width="295" height="86"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="qjG-8H-5L2">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="86"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h9D-g4-x2A">
+                                                        <rect key="frame" x="0.0" y="0.0" width="322" height="33"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="6nj-MF-tg4" firstAttribute="top" secondItem="O0N-Ig-jaj" secondAttribute="top" constant="317" id="hca-wZ-TUd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-zL-o34" customClass="TimeScheduleXib" customModule="RxSwiftStudy" customModuleProvider="target">
+                                <rect key="frame" x="-150" y="307" width="332" height="466"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Gbk-Bf-rJS" firstAttribute="trailing" secondItem="6nj-MF-tg4" secondAttribute="trailing" constant="40" id="2DY-uZ-pUA"/>
-                            <constraint firstItem="J07-21-xgC" firstAttribute="top" secondItem="bBV-fi-pop" secondAttribute="bottom" constant="42" id="5Mk-XY-oK9"/>
                             <constraint firstItem="Gbk-Bf-rJS" firstAttribute="trailing" secondItem="bBV-fi-pop" secondAttribute="trailing" constant="20" id="G4a-aq-dzv"/>
-                            <constraint firstItem="qjG-8H-5L2" firstAttribute="top" secondItem="J07-21-xgC" secondAttribute="bottom" constant="8" id="Gjk-L9-of0"/>
                             <constraint firstItem="sEE-25-5Gx" firstAttribute="leading" secondItem="Gbk-Bf-rJS" secondAttribute="leading" constant="289" id="Qcl-Zu-F4h"/>
-                            <constraint firstItem="6nj-MF-tg4" firstAttribute="leading" secondItem="Gbk-Bf-rJS" secondAttribute="leading" constant="40" id="SdB-VZ-5q6"/>
+                            <constraint firstItem="sEE-25-5Gx" firstAttribute="top" secondItem="Gbk-Bf-rJS" secondAttribute="top" constant="523" id="ax9-1Y-UQ8"/>
                             <constraint firstItem="bBV-fi-pop" firstAttribute="top" secondItem="Gbk-Bf-rJS" secondAttribute="top" constant="13" id="dV5-2W-EWR"/>
-                            <constraint firstItem="sEE-25-5Gx" firstAttribute="top" secondItem="6nj-MF-tg4" secondAttribute="bottom" constant="37" id="lTR-EU-nM8"/>
                             <constraint firstItem="Gbk-Bf-rJS" firstAttribute="trailing" secondItem="sEE-25-5Gx" secondAttribute="trailing" constant="36" id="nRP-2L-C1V"/>
-                            <constraint firstItem="Gbk-Bf-rJS" firstAttribute="bottom" secondItem="6nj-MF-tg4" secondAttribute="bottom" constant="108" id="sxR-mj-C98"/>
-                            <constraint firstItem="J07-21-xgC" firstAttribute="width" secondItem="qjG-8H-5L2" secondAttribute="width" id="t20-Yo-4gj"/>
-                            <constraint firstItem="J07-21-xgC" firstAttribute="centerX" secondItem="Gbk-Bf-rJS" secondAttribute="centerX" id="vky-XX-bCc"/>
-                            <constraint firstItem="6nj-MF-tg4" firstAttribute="top" secondItem="auM-xS-tcg" secondAttribute="top" constant="424" id="voL-Lt-a4y"/>
-                            <constraint firstItem="Gbk-Bf-rJS" firstAttribute="bottom" secondItem="sEE-25-5Gx" secondAttribute="bottom" constant="21" id="wil-jM-h8h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gbk-Bf-rJS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="vt5-8L-fMh"/>
                     <connections>
-                        <outlet property="calendarView" destination="J07-21-xgC" id="Rs9-BF-Uw0"/>
+                        <outlet property="AcademicShedule" destination="O0N-Ig-jaj" id="AcE-aR-mAK"/>
+                        <outlet property="asd" destination="O2F-zL-o34" id="LVL-rg-mxl"/>
+                        <outlet property="calendarView" destination="5Db-BX-YxV" id="7Kl-4I-Dek"/>
                         <outlet property="myView" destination="qjG-8H-5L2" id="BZ5-Pw-c2F"/>
                     </connections>
                 </viewController>
