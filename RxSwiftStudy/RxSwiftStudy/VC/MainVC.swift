@@ -48,4 +48,9 @@ extension MainVC {
         let previous = Calendar.current.date(byAdding: .month, value: -1, to: calendarView.currentPage)!
         self.calendarView.setCurrentPage(previous, animated: true)
     }
+    
+    @objc func nextBtn(_ sender: UIButton) {
+        let next = Calendar.current.date(byAdding: .month, value: +1, to: calendarView.currentPage)!
+        self.calendarView.setCurrentPage(next, animated: true)
+    }
 }
