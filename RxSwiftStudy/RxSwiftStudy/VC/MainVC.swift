@@ -15,8 +15,6 @@ class MainVC: UIViewController {
         button.addTarget(self, action: #selector(previousBtn(_:)), for: .touchUpInside)
         self.view.addSubview(button)
         asd.isHidden = true
-        
-       // let view = UIView(frame: CGRect(x: calendarView + 10, y: calendarView + 30, width: calendarView, height: 2))
     }
     @IBAction func changeScheduleAndAcademicSchedule(_ sender: UIButton) {
         print("btn tap" )
@@ -42,6 +40,7 @@ extension MainVC {
         ca.weekdayTextColor = .black
         calendarView.today = nil
         calendarView.placeholderType = .none
+        calendarView.pagingEnabled
     }
     
     @objc func previousBtn(_ sender: UIButton) {
