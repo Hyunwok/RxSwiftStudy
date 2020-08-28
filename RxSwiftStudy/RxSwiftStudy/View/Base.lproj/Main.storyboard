@@ -611,13 +611,18 @@
                                     <action selector="changeScheduleAndAcademicSchedule:" destination="VMX-7L-nzg" eventType="touchUpInside" id="KPK-1m-N2c"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0N-Ig-jaj">
-                                <rect key="frame" x="40" y="107" width="295" height="403"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0N-Ig-jaj">
+                                <rect key="frame" x="40" y="129.5" width="295" height="403"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Db-BX-YxV" customClass="FSCalendar">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="292"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                                <color key="value" red="0.32549019610000002" green="0.13725490200000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6nj-MF-tg4">
                                         <rect key="frame" x="0.0" y="317" width="295" height="86"/>
@@ -641,20 +646,31 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="6nj-MF-tg4" firstAttribute="top" secondItem="O0N-Ig-jaj" secondAttribute="top" constant="317" id="hca-wZ-TUd"/>
+                                    <constraint firstAttribute="height" constant="403" id="llO-LV-fQy"/>
+                                    <constraint firstAttribute="width" constant="295" id="o4f-Rl-UEo"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-zL-o34" customClass="TimeScheduleXib" customModule="RxSwiftStudy" customModuleProvider="target">
-                                <rect key="frame" x="-150" y="307" width="332" height="466"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-zL-o34" customClass="TimeScheduleXib" customModule="RxSwiftStudy" customModuleProvider="target">
+                                <rect key="frame" x="-204" y="521" width="321" height="470"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="470" id="TVW-2s-yDP"/>
+                                    <constraint firstAttribute="width" constant="321" id="a8l-iY-XSV"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="O2F-zL-o34" firstAttribute="leading" secondItem="Gbk-Bf-rJS" secondAttribute="leading" constant="27" id="2jj-wA-X8y"/>
+                            <constraint firstItem="O0N-Ig-jaj" firstAttribute="centerY" secondItem="Gbk-Bf-rJS" secondAttribute="centerY" id="6dM-lu-TvU"/>
+                            <constraint firstItem="O0N-Ig-jaj" firstAttribute="centerX" secondItem="Gbk-Bf-rJS" secondAttribute="centerX" id="B04-lb-ukM"/>
                             <constraint firstItem="Gbk-Bf-rJS" firstAttribute="trailing" secondItem="bBV-fi-pop" secondAttribute="trailing" constant="20" id="G4a-aq-dzv"/>
+                            <constraint firstItem="O2F-zL-o34" firstAttribute="centerY" secondItem="Gbk-Bf-rJS" secondAttribute="centerY" id="GLE-CB-K74"/>
                             <constraint firstItem="sEE-25-5Gx" firstAttribute="leading" secondItem="Gbk-Bf-rJS" secondAttribute="leading" constant="289" id="Qcl-Zu-F4h"/>
                             <constraint firstItem="sEE-25-5Gx" firstAttribute="top" secondItem="Gbk-Bf-rJS" secondAttribute="top" constant="523" id="ax9-1Y-UQ8"/>
                             <constraint firstItem="bBV-fi-pop" firstAttribute="top" secondItem="Gbk-Bf-rJS" secondAttribute="top" constant="13" id="dV5-2W-EWR"/>
+                            <constraint firstItem="O0N-Ig-jaj" firstAttribute="leading" secondItem="Gbk-Bf-rJS" secondAttribute="leading" constant="40" id="n1A-xm-Ayq"/>
+                            <constraint firstItem="O2F-zL-o34" firstAttribute="centerX" secondItem="Gbk-Bf-rJS" secondAttribute="centerX" id="n9l-7r-U11"/>
                             <constraint firstItem="Gbk-Bf-rJS" firstAttribute="trailing" secondItem="sEE-25-5Gx" secondAttribute="trailing" constant="36" id="nRP-2L-C1V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gbk-Bf-rJS"/>
