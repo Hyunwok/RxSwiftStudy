@@ -2,7 +2,12 @@ import UIKit
 import FSCalendar
 
 class MainVC: UIViewController {
+    
+    let holidayArr = [Date]()
+    let academicArr = [Date]()
+    let performanceArr = [Date]()
 
+    @IBOutlet weak var vview: UIView!
     @IBOutlet weak var calendarView: FSCalendar!
     @IBOutlet weak var asd: TimeScheduleXib!
     @IBOutlet weak var AcademicShedule: UIView!
@@ -15,6 +20,10 @@ class MainVC: UIViewController {
         button.addTarget(self, action: #selector(previousBtn(_:)), for: .touchUpInside)
         self.view.addSubview(button)
         asd.isHidden = true
+
+        self.vview.clipsToBounds = true
+        self.vview.layer.cornerRadius = 30
+        self.vview.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
     @IBAction func changeScheduleAndAcademicSchedule(_ sender: UIButton) {
         print("btn tap" )
@@ -26,6 +35,14 @@ class MainVC: UIViewController {
             asd.isHidden = true
         }
         sender.isSelected = !sender.isSelected
+    }
+    
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        let dateString = self.dateFormatter.string(from: date)
+        if self.list.contains(dateString) {
+            return 1
+        }
+        return 0
     }
 }
 
@@ -40,7 +57,6 @@ extension MainVC {
         ca.weekdayTextColor = .black
         calendarView.today = nil
         calendarView.placeholderType = .none
-        calendarView.pagingEnabled
     }
     
     @objc func previousBtn(_ sender: UIButton) {
