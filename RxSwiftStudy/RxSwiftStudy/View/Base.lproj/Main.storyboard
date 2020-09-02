@@ -658,6 +658,11 @@
                                     <constraint firstAttribute="width" constant="321" id="a8l-iY-XSV"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Hk-j6-6AZ">
+                                <rect key="frame" x="40" y="308" width="295" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -681,6 +686,7 @@
                         <outlet property="asd" destination="O2F-zL-o34" id="LVL-rg-mxl"/>
                         <outlet property="calendarView" destination="5Db-BX-YxV" id="7Kl-4I-Dek"/>
                         <outlet property="myView" destination="qjG-8H-5L2" id="BZ5-Pw-c2F"/>
+                        <outlet property="vview" destination="2Hk-j6-6AZ" id="ZNv-NU-9Ic"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgo-XF-SrP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
